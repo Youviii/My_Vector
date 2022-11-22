@@ -121,8 +121,8 @@ public:
     }
 
     bool IsEmpty() const { return length == 0; }
-    int Length() const { return length; } //Метод возвращает логическую длину
-    int Capacity() const { return capacity; } //Метод возвращает физическую длину
+    int Length() const { return length; }
+    int Capacity() const { return capacity; }
 private:
 
     void UpCapacity(int newCapacity) //Метод увеличения размера блока памяти
