@@ -46,7 +46,7 @@ public:
 
         std::cout << "\nEnd----print----InVector\n";
     }
-    void PushBack(TypeOfElement newElement) //Метод добавляет новый элемент в конец вектора и увеличивает логическую длину на 1
+    void PushBack(TypeOfElement newElement)
     {
         if (capacity <= length) UpCapacity(capacity + 1);
         dataPointer[length] = newElement;
@@ -75,9 +75,9 @@ public:
         return new_vec;
     }
 
-    TypeOfElement& operator[] (int index) { return dataPointer[index]; } //Оператор индексирования
-    const TypeOfElement& operator[](int index) const { return dataPointer[index]; } //Оператор индексирования
-    const TypeOfElement& At(int index) const { return dataPointer[index]; } //Метод индексирования
+    TypeOfElement& operator[] (int index) { return dataPointer[index]; }
+    const TypeOfElement& operator[](int index) const { return dataPointer[index]; }
+    const TypeOfElement& At(int index) const { return dataPointer[index]; }
 
     void Clear()
     {
