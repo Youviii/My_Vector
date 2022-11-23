@@ -22,6 +22,14 @@ public:
             capacity = rhs.capacity;
         }
     }
+    MyVector(TypeOfElement inputArray[], int inLength)
+    {
+        dataPointer = new TypeOfElement[inLength + 1];
+        for (int i = 0; i < inLength; i++)
+            dataPointer[i] = inputArray[i];
+        length = inLength;
+        capacity = inLength + 1;
+    }
     ~MyVector() { delete[] dataPointer; }
     MyVector& operator= (const MyVector& rhs)
     {
@@ -125,7 +133,7 @@ public:
     int Capacity() const { return capacity; }
 private:
 
-    void UpCapacity(int newCapacity) //Метод увеличения размера блока памяти
+    void UpCapacity(int newCapacity) // Метод увеличения размера блока памяти
     {
         if (newCapacity > capacity)
         {
@@ -137,9 +145,9 @@ private:
         }
     }
 
-    int length; //текущее логическое количество элементов вектора (логическая длина)
-    int capacity; //количество элементов динамического блока памяти (физическая длина)
-    TypeOfElement* dataPointer; //указатель на динамический блок памяти
+    int length; // логическая длина
+    int capacity; // физическая длина
+    TypeOfElement* dataPointer; // указатель на динамический блок памяти
 };
 
 template <typename TypeOfElement>
