@@ -18,7 +18,7 @@ int main()
     //MyVector<char> vec1, vec2, vec3;
     MyVector<int> vec4, vec5, vec6;
 
-    MyVector<int> vec1(arr3, 5);
+    MyVector<int> vec1(arr3, 5), vec2;
 
     cout << vec1 << endl;
 
